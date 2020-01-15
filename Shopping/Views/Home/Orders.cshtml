@@ -1,0 +1,18 @@
+﻿@model IEnumerable<OrdersViewModel>
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<h2>Orders</h2>
+@foreach (var item in Model)
+{
+    <div>
+        @item.Date
+        <a asp-action="Details" asp-route-id="@item.ProductId">
+            <img src="@item.ImageSrc" width="130" height="130" />
+            @item.Title
+        </a>
+        ::: @item.Price x @item.Quantity = @item.SubTotal
+    </div>
+
+}

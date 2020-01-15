@@ -1,0 +1,16 @@
+﻿@model ProductViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+<div>
+    <img src="@Model.ImageSrc" />
+    <div>
+        @Model.Title
+    </div>
+    <div>
+        @Model.Price
+    </div>
+    <a asp-action="AddToCart" asp-route-id="@Model.Id">Add to Cart</a>
+</div>
